@@ -19,10 +19,10 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //might have to change the db name depending on what i call it
-mongoose.connect('mongodb+srv://Monica-95:12345@cluster0.ii1sf.mongodb.net/test', {
-  useNewUrlParser: true,
-  useFindAndModify: false,
-  useUnifiedTopology: true,
+mongoose.connect('mongodb+srv://Monica-95:test@cluster0.ii1sf.mongodb.net/test', {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
 });
 
 db.on("error", error => console.error(error));
@@ -33,5 +33,5 @@ app.use(apiRouter);
 
 
 app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
+    console.log(`App running on port ${PORT}!`);
 });
